@@ -23,7 +23,7 @@ public class JavascriptCompiler {
         File fIn = new File(args[0]);
         if (!fIn.exists()) throw new RuntimeException("Bestand bestaat niet");
         if (!fIn.isFile()) throw new RuntimeException("Bestand is geen file");
-        if (!"text/html".equals(Files.probeContentType(fIn.toPath()))) throw new RuntimeException("Bestand bestaat is geen text/html, maar: " + Files.probeContentType(fIn.toPath()));
+        if (!"text/html".equals(Files.probeContentType(fIn.toPath()))) throw new RuntimeException("MIME type van bestand is geen text/html, maar: " + Files.probeContentType(fIn.toPath()));
 
         String index = readFile(fIn, StandardCharsets.UTF_8);
         Document doc = Jsoup.parse(index);
