@@ -1,0 +1,1 @@
+@java -cp out\production\zoekBestanden nl.groningen.lveekhout.Main d:\dev
