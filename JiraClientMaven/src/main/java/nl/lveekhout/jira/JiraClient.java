@@ -58,7 +58,7 @@ public class JiraClient {
             System.out.printf("\r\n[%s] %s\r\n", s, new nl.lveekhout.jira.rest.issue.Issue(args[0], args[1]).zoekIssueSummary(s));
             for (Issue issue : map.get(s)) {
                 String storypoints = "&nbsp;";
-                if (issue.estimateStatistic.statFieldValue.value!=null) {
+                if (issue.estimateStatistic!=null&&issue.estimateStatistic.statFieldValue.value!=null) {
                     String[] decimal = issue.estimateStatistic.statFieldValue.value.split("\\.");
                     if (decimal.length==2) {
                         storypoints = "";
