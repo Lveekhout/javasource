@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class GetResponseInclusiefHeaders {
     public static void main(String[] args) throws IOException {
-        Connection.Response res = Jsoup.connect("http://www.klm.nl")
+        Connection.Response res = Jsoup.connect("https://www.klm.com/travel/nl_nl/apps/ebt/calendar.htm?application=EBT7&trip=AMS%3ECUR-CUR%3EAMS&flightsSource=TRIPPLANNER&flightPreference=LOWEST_PRICE&flightProductFilter=LOWEST_PRICE&destinationType=AIRPORT&WT.seg_3=HPN_letsgo_May19_CUR")
                 .method(Connection.Method.GET)
                 .execute();
 
@@ -20,10 +20,10 @@ public class GetResponseInclusiefHeaders {
         }
 
         Document doc = res.parse();
-//        System.out.println(doc.toString());
-        Elements elements = doc.select("a");
-        for (Element e : elements) {
-            System.out.println(e.attributes().get("href"));
-        }
+        System.out.println(doc.toString());
+//        Elements elements = doc.select("a");
+//        for (Element e : elements) {
+//            System.out.println(e.attributes().get("href"));
+//        }
     }
 }
