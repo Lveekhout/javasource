@@ -1,0 +1,1 @@
+java -jar target/rdw-kenteken-1.0-SNAPSHOT-jar-with-dependencies.jar>d:\rdw.txt
